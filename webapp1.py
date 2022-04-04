@@ -1,12 +1,13 @@
-from flask import Flask
+from flask import Flask, render_template
+
 app=Flask(__name__)
 
 @app.route('/')
 def welcome():
-    return "welcome to my website"
+    return render_template("welcome.html")
 @app.route('/gallery')
 def Gallery_page():
-    return "Gallery Page"
+    return render_template("gallery.html")
 
 
 if __name__=="__main__":
